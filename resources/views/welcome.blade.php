@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8">
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>{{ env('APP_NAME') }}</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
@@ -17,13 +19,19 @@
             --horizontal-padding: calc(var(--vertical-padding) * 2);
         }
 
+        .tree {
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
         .tree ul {
             padding-top: var(--line-height);
             position: relative;
         }
 
         .tree li {
-            float: left;
+            display: inline-block;
+            vertical-align: top;
             text-align: center;
             list-style-type: none;
             position: relative;
